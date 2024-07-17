@@ -1,0 +1,18 @@
+<!-- <p>customer-table works!</p> -->
+<input type="text" (input)="filterCustomers($event.target.value)" placeholder="Filter by customer name">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Transaction Amounts</th>
+  </tr>
+  <tr *ngFor="let customer of filteredCustomers">
+    <td>{{ customer.name }}</td>
+    <td>
+      <ul>
+        <li *ngFor="let transaction of getCustomerTransactions(customer.id)">
+          {{ transaction.amount }}
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>

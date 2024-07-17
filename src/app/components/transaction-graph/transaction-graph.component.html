@@ -1,0 +1,11 @@
+
+  <div *ngIf="transactions.length > 0">
+    <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [chartType]="barChartType"
+      [legend]="barChartLegend">
+    </canvas>
+  </div>
+  
